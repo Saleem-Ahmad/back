@@ -6,8 +6,8 @@ export type BookingDocument = HydratedDocument<Booking>;
   timestamps: true,
 })
 export class Booking extends Document {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Blog" })
-  blog: string;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Blogs" })
+  blogs: string;
   
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "User" })
   user: string;

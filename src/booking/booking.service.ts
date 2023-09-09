@@ -20,14 +20,14 @@ export class BookingService {
     
     const post = new this.BookingModel({
       user: id,
-      blog:event_id,
+      blogs:event_id,
       numberOfTickets:numberOfTickets
       
     });
     return post.save();
   }
   async findUserBookings(user:string):Promise<BookingDocument[]>{
-    const bookings = this.BookingModel.find({ user:user }).populate("user").populate("blog")
+    const bookings = this.BookingModel.find({ user:user }).populate("user").populate("blogs")
     return bookings
 
   }
